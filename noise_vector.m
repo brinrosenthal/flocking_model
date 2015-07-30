@@ -1,0 +1,6 @@
+function [ output_args ] = noise_vector(sd,number)
+%COMPUTES psi AND eta, THE NONDIMENSIONAL ACCELERATION RATE AND DAMPING,
+%GIVEN PARAMETER VALUES FROM THE DIMENSIONAL VERSION OF THE D'ORSOGNA MODEL
+
+output_args = mvnrnd([0 0], [sd^2 0 ;0 sd^2],number);%NOTE: CONVERT SD TO VARIANCES
+end
